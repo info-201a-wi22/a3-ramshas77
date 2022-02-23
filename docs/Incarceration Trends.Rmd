@@ -1,0 +1,50 @@
+---
+title: "Incarceration Trends"
+author: "Ramsha Sheikh"
+date: "19/02/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("../source/code.R")
+```
+
+```{r}
+variable1
+```
+```{r}
+variable2
+```
+
+```{r}
+variable3
+```
+
+```{r}
+variable4
+```
+
+```{r}
+variable5
+```
+
+```{r}
+chart1 <- display_chart1(data)
+chart1
+```
+
+```{r}
+chart2<- display_chart2(data)
+chart2
+```
+
+```{r}
+display_map(data)
+map
+
+```
+
+
+
+
