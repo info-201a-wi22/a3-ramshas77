@@ -1,7 +1,7 @@
 ---
 title: "Incarceration Trends"
 author: "Ramsha Sheikh"
-date: "19/02/2022"
+date: "24/02/2022"
 output: html_document
 ---
 
@@ -9,38 +9,53 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 source("../source/code.R")
 ```
+# Introduction
+This report is to examine how Black American populations are affected by incarceration, and how their incarceration rates relate to the entire black population, how they compare to the entire incarcerated population, and how these variables change across time and other regions. The goal is that these ratios, rates, proportions, and comparisons will highlight the systemic racism that this marginalized group faces. 
 
+## Summary Statistics
+
+### Variable 1: Number of incarcerated black people
+Which county in the US has the highest number of incarcerated black people? 
 ```{r}
 variable1
 ```
+### Variable 2: Incarcerated black women
+What state has had the highest ratio of incarcerated black women to the entire incarcerated population? (when taking the average of all the counties every year)
 ```{r}
 variable2
 ```
-
+### Variable 3: Incarcerated Black Men vs Incarcerated White Men
+Which state has the highest disparity between black incarcerated men and white incarcerated men? (when taking the average of all counties every year)
 ```{r}
 variable3
 ```
-
+### Variable 4: 
+Which state has the highest proportion of incarcerated black people to the entire incarcerated population? (when taking the average of all counties every year)
 ```{r}
 variable4
 ```
-
+### Variable 5: 
+Which state has the highest proportion of black people to the entire black population? (when taking the average of all counties every year)
 ```{r}
 variable5
 ```
-
+# Chart 1: Incarcerated black population over time
+On the y axis is a scale for the number of incarcerated black people. On the x axis are 10 bars, one for each year. This chart shows that the black incarcerated proportion steadily increased between 1999 and 2008. 
 ```{r}
 chart1 <- display_chart1(data)
 chart1
 ```
-
+# Chart 2: Comparing black and white jail populations. 
+This chart has the population on the y axis, and the year on the x axis. There are two lines, one for each racial group. When analyzing this visualization, one can see that black and white jail populations were roughly equal, until about 1990 when black jail populations were higher, and then white jail populations took the lead again in 2000. 
 ```{r}
 chart2<- display_chart2(data)
 chart2
 ```
+# Map 
+One can get a bigger picture of incarceration among the black population by analyzing the numbers by spliting the data up state by state, and within each state, comparing the incarcerated black population to that state's entire black population. This map takes the portion of the data from 2016, calculates that ratio, and maps it by state. Highest ratios (where more black people compared to the entire black population are incarcerated) have a darker color.  Wisconsin, then followed by Iowa and Oklahoma have the highest ratio. North Dakota has the lowest ratio. 
 
 ```{r}
-display_map(data)
+map <- display_map(data)
 map
 
 ```

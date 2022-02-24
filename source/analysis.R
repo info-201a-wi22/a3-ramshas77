@@ -51,7 +51,7 @@ trend_over_time <- data %>% select(year, black_jail_pop) %>% na.omit() %>% group
 
 display_chart1 <- function(data) {
   trend_over_time <- data %>% select(year, black_jail_pop) %>%
-    filter(year >= 1999, year <= 2008) %>%
+    filter(year >= 1998, year <= 2008) %>%
     na.omit() %>% 
     group_by(year) %>%
     summarize(nationwide_black_jail_population = sum(black_jail_pop))
@@ -72,8 +72,7 @@ display_chart2 <- function(data) {
     geom_line(mapping = aes(x=year, y=nationwide_black_jail_population, 
                             color = "nationwide black jail population")) + 
     geom_line(mapping = aes(x=year, y=nationwide_white_jail_population, 
-                            color ="nationwide white jail population")) +
-    labs(y = "population")
+                            color ="nationwide white jail population"))
   return(chart2)
 }
 
