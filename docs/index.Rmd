@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-source("../source/code.R")
+source("../source/analysis.R")
 ```
 # Introduction
 This report is to examine how Black American populations are affected by incarceration, and how their incarceration rates relate to the entire black population, how they compare to the entire incarcerated population, and how these variables change across time and other regions. The goal is that these ratios, rates, proportions, and comparisons will highlight the systemic racism that this marginalized group faces. 
